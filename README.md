@@ -38,7 +38,7 @@ I modified the README since I consider I was not quite clear with something. The
 
 I'm aware of this and already know the solution. 
 
-However I decided to not implement it because once you do it since the API returns always 1 as the index for the current page it would prevent the user to go any further in the pagination flow, basically it was a trade-off (solution is just one line of code tho).
+However I decided to not implement it because once you do it since the API returns always 1 as the index for the current page it would prevent the user to go any further in the pagination flow, basically it was a trade-off (solution is just one extra line of code tho).
 
 
 

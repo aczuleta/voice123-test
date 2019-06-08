@@ -27,7 +27,7 @@ In order to run this project you should have:
 
 # Future work
 
-- Implement an ExhaustMap strategy in the button OnClick search event in order to prevent the user to overwhelm the server with unnecessary requests for the same desired information.
+- Implement an ExhaustMap strategy in the search button in order to prevent the user to overwhelm the server with unnecessary requests for the same desired information.
 - Implement a InMemory Cache strategy in order to avoid making previously made request to the server, that way we could improve the user experience as well.
 - Review the API in order to see why does it return the same current page.
 - Look for some better and prettier paginator control system (Angular Material paginator shows a weird behaviour and it is kind of ugly to being honest)

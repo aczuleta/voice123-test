@@ -1,0 +1,15 @@
+$component : ".actors-summary";
+
+@mixin padding-contaner($size) {
+    padding: $size;
+}
+
+#{$component}{
+    &__main{
+        @include padding-contaner(30px);
+    }
+
+    &__btn {
+        margin-bottom:30px;
+    }
+}

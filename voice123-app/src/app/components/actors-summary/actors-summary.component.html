@@ -1,0 +1,36 @@
+<div class="row actors-summary__main">
+    <div class="row full-width">
+        <div class="col-xs-12 col-md-6 col-md-offset-6 col-lg-4 col-lg-offset-4 center-xs">
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Keyword" [(ngModel)]="keyword" #searchBox>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="actors-summary__btn" 
+            (click)="search(keyword)">Search</button>
+        </div>
+    </div>
+
+    <div class="col-xs-12 center-xs left-md col-md-6 col-md-offset-6">
+            <mat-paginator #paginator [length]="length"
+            [pageSize]="pageSize" [pageIndex]="currentPage"
+            (page)="changePage(keyword, $event)">
+            </mat-paginator>
+    </div>
+    <div class="row full-width" *ngIf="(actors$ | async) as actors">
+        <div class="col-xs-12 col-md-6 col-lg-4" *ngFor="let actor of actors">
+            <voice-actor-card [username]="actor.username" [profilePic]="actor.profilePic"
+            [summary]="actor.summary" [voiceSample]="actor.voiceSample" 
+            [profileLink]="actor.profileLink">
+            </voice-actor-card>
+        </div>
+    </div>
+
+    <div class="row full-width" *ngIf="!(actors$ | async) || loading">
+        <div class="col-xs-12 center-xs row ">
+            <mat-progress-spinner
+                class="example-margin"
+                color="primary"
+                mode="indeterminate">
+            </mat-progress-spinner>
+        </div>
+    </div>
+</div>

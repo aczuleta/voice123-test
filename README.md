@@ -23,7 +23,7 @@ In order to run this project you should have:
 - 2019/06/08 - 1:45AM - 2:30AM Implemented the pagination funcionality
 - 2019/06/08 - 2:45AM - 3:30AM Struggled with some bugs related to pagination, apparently for some reason the current page header in the provided API is returning 1 always.
 - 2019/06/08 - 3:30AM  Sent solution and documented
-
+- 2019/06/08 - 8:56AM Readme modification 
 
 # Future work
 
@@ -32,6 +32,13 @@ In order to run this project you should have:
 - Review the API in order to see why does it return the same current page.
 - Look for some better and prettier paginator control system (Angular Material paginator shows a weird behaviour and it is kind of ugly to being honest)
 - We could do a lot of performance optimization by following the RAIL and PRPL patterns by implementing stuff like SSR or Service Workers.
+
+NOTE: 
+I modified the README since I consider I was not quite clear with something. There is an small bug related with the paginator when the size of the collection attached to it changes and you are on a page different than number one.
+
+I'm aware of this and already know the solution. 
+
+However I decided to not implement it because once you do it since the API returns always 1 as the index for the current page it would prevent the user to go any further in the pagination flow, basically it was a trade-off (solution is just one line of code tho).
 
 
 
